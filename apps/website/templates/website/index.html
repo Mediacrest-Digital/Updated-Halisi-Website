@@ -4,197 +4,202 @@
 
 
 {% block content %}
-    {% include 'website/components/header.html' %}
-    <section>
-        {% include 'website/components/sliders.html' %}
-    </section>
-    <section class="bg-light">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-4 col-12 mb-3">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="bi bi-phone fs-1 text-center text-blue"></i>
-                        </div>
-                        <div class="col-10">
-                            <h6 class="text-grey fw-light">Give Us a Call</h6>
-                            <div>
-                                <span class="text-blue">+254 735 425 474 <br /></span>
-                                <span class="text-blue">+254 748 866 586</span>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<div class="col-lg-4 col-12 mb-3">
-    <a href="{% url 'website:contact_halisi' %}" class="text-decoration-none text-reset">
+{% include 'website/components/header.html' %}
+<section>
+    {% include 'website/components/sliders.html' %}
+</section>
+<section class="bg-light">
+    <div class="container py-5">
         <div class="row">
-            <div class="col-2">
-                <i class="bi bi-calendar-event fs-1 text-center text-blue"></i>
-            </div>
-            <div class="col-10">
-                <h6 class="text-grey fw-light">Book an Appointment</h6>
-                <div>
-                    <span class="text-blue">Calendar</span>
+            <div class="col-lg-4 col-12 mb-3">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="bi bi-phone fs-1 text-center text-blue"></i>
+                    </div>
+                    <div class="col-10">
+                        <h6 class="text-grey fw-light">Give Us a Call</h6>
+                        <div>
+                            <span class="text-blue">+254 735 425 474 <br /></span>
+                            <span class="text-blue">+254 748 866 586</span>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </a>
-</div>
-
-                <div class="col-lg-4 col-12 mb-3">
+            <div class="col-lg-4 col-12 mb-3">
+                <a href="{% url 'website:contact_halisi' %}" class="text-decoration-none text-reset">
                     <div class="row">
                         <div class="col-2">
-                            <i class="bi bi-geo-alt fs-1 text-center text-blue"></i>
+                            <i class="bi bi-calendar-event fs-1 text-center text-blue"></i>
                         </div>
                         <div class="col-10">
-                            <h6 class="text-grey fw-light">Pay Us a Visit</h6>
+                            <h6 class="text-grey fw-light">Book an Appointment</h6>
                             <div>
-                                <span class="text-blue">Nairobi-Namanga Road,<br /></span>
-                                <span class="text-blue">Past Total Kitengela, Yukos</span>
+                                <span class="text-blue">Calendar</span>
                             </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-12 mb-3">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="bi bi-geo-alt fs-1 text-center text-blue"></i>
+                    </div>
+                    <div class="col-10">
+                        <h6 class="text-grey fw-light">Pay Us a Visit</h6>
+                        <div>
+                            <span class="text-blue">Nairobi-Namanga Road,<br /></span>
+                            <span class="text-blue">Past Total Kitengela, Yukos</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 col-12">
-                    <div class="row">
-                        <div class="col-lg-6 col-12 pt-5">
-                            <h1 class="text-blue fs-3">Halisi Family Hospital</h1>
-                            <p class="lh-lg fw-light">
-Halisi Family Hospital is a private healthcare organization located in Kitengela, Kajiado County. 
-‘Halisi’ is a Swahili word that means being truthful, authentic, genuine and real. Our culture focuses on providing health and wellness services to families in a manner that reflects being ‘Halisi’.
+<section class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1 col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-12 pt-5">
+                        <h1 class="text-blue fs-3">Halisi Family Hospital</h1>
+                        <p class="lh-lg fw-light">
+                            Halisi Family Hospital is a private healthcare organization located in Kitengela, Kajiado
+                            County.
+                            ‘Halisi’ is a Swahili word that means being truthful, authentic, genuine and real. Our
+                            culture focuses on providing health and wellness services to families in a manner that
+                            reflects being ‘Halisi’.
 
-                            </p>
-                        
-                            <a class="btn btn-blue-outline rounded-0 mb-3" href="{{package.pdfFile.url}}">Read More <i class="bi bi-arrow-right ps-3"></i></a>
-                        </div>
-                        <div class="col-lg-4 offset-lg-2 col-12">
-                            <div class="visiting-hours p-4">
-                                <h4 class="fw-light">Visiting Hours</h4>
+                        </p>
 
-                                <div class="py-4">
-                                    <div class="hours">
-                                        <h5 class="fs-6 fw-light">Morning</h5>
-                                        <p class="fw-lighter">6:00AM - 7:30AM</p>
-                                    </div>
-                                    <div class="hours">
-                                        <h5 class="fs-6 fw-light">Midday</h5>
-                                        <p class="fw-lighter">11:30AM - 1:30PM</p>
-                                    </div>
-                                    <div class="hours">
-                                        <h5 class="fs-6 fw-light">Evening</h5>
-                                        <p class="fw-lighter">6:00PM - 8:00PM</p>
-                                    </div>
+                        <a class="btn btn-blue-outline rounded-0 mb-3" href="{{package.pdfFile.url}}">Read More <i
+                                class="bi bi-arrow-right ps-3"></i></a>
+                    </div>
+                    <div class="col-lg-4 offset-lg-2 col-12">
+                        <div class="visiting-hours p-4">
+                            <h4 class="fw-light">Visiting Hours</h4>
 
-                                    <!--<div class="pt-3">-->
-                                    <!--    <button class="btn btn-white-outline fw-light rounded-0">-->
-                                    <!--        View Special Clinics Schedule-->
-                                    <!--    </button>-->
-                                    <!--</div>-->
-                                    
+                            <div class="py-4">
+                                <div class="hours">
+                                    <h5 class="fs-6 fw-light">Morning</h5>
+                                    <p class="fw-lighter">6:00AM - 7:30AM</p>
                                 </div>
+                                <div class="hours">
+                                    <h5 class="fs-6 fw-light">Midday</h5>
+                                    <p class="fw-lighter">11:30AM - 1:30PM</p>
+                                </div>
+                                <div class="hours">
+                                    <h5 class="fs-6 fw-light">Evening</h5>
+                                    <p class="fw-lighter">6:00PM - 8:00PM</p>
+                                </div>
+
+                                <!--<div class="pt-3">-->
+                                <!--    <button class="btn btn-white-outline fw-light rounded-0">-->
+                                <!--        View Special Clinics Schedule-->
+                                <!--    </button>-->
+                                <!--</div>-->
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <section class="services-home">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-4 col-12 bg-blue py-3 services-offered">
-                    <h1 class="fw-light py-2 text-light fs-3">Services Offered</h1>
-                    <ul class="nav flex-column">
-                        {% for service in listservices %}
-                            <li class="nav-item">
-                                <a href="{% url 'website:service' service.sid %}" class="nav-link"><i class="bi bi-arrow-right"></i> {{ service.name }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    
-<div class="pt-3" id="btnPt">
-    {% if specialty_service %}
-        <a href="{% url 'website:service' specialty_service.sid %}"
-           class="btn btn-white-outline fw-light rounded-0 text-decoration-none d-inline-block">
-            View Special Clinics Schedule
-        </a>
-    {% else %}
-        <button class="btn btn-white-outline fw-light rounded-0" disabled>
-            Specialty Services Not Found
-        </button>
-    {% endif %}
-</div>
+<section class="services-home">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4 col-12 bg-blue py-3 services-offered">
+                <h1 class="fw-light py-2 text-light fs-3">Services Offered</h1>
+                <ul class="nav flex-column">
+                    {% for service in listservices %}
+                    <li class="nav-item">
+                        <a href="{% url 'website:service' service.sid %}" class="nav-link"><i
+                                class="bi bi-arrow-right"></i> {{ service.name }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
 
+                <div class="pt-3" id="btnPt">
+                    {% if specialty_service %}
+                    <a href="{% url 'website:service' specialty_service.sid %}"
+                        class="btn btn-white-outline fw-light rounded-0 text-decoration-none d-inline-block">
+                        View Special Clinics Schedule
+                    </a>
+                    {% else %}
+                    <button class="btn btn-white-outline fw-light rounded-0" disabled>
+                        Specialty Services Not Found
+                    </button>
+                    {% endif %}
                 </div>
-                <div class="col-lg-8 col-12">
-                    <div class="row">
-                        {% for service in services %}
-                            <div class="col-lg-6 col-12 mb-4">
-                                <a href="{% url 'website:service' service.sid %}">
-                                    <img src="{{service.image.url}}" class="img-fluid" />
-                                    <h1 class="fs-6 fw-light text-center text-blue pt-3">{{ service.name }}</h1>
-                                </a>
-                            </div>
-                        {% endfor %}
-                    </div>
-                </div>
-                
-                
+
             </div>
+            <div class="col-lg-8 col-12">
+                <div class="row">
+                    {% for service in services %}
+                    <div class="col-lg-6 col-12 mb-4">
+                        <a href="{% url 'website:service' service.sid %}">
+                            <img src="{{service.image.url}}" class="img-fluid" />
+                            <h1 class="fs-6 fw-light text-center text-blue pt-3">{{ service.name }}</h1>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
         </div>
-        
-                                    
-    </section>
+    </div>
+
+
+</section>
 <style>
 
-    
+
 </style>
 
-    <section class="bg-blue py-5 testimonials">
-        <div class="container">
-            <h1 class="text-center fw-light text-light fs-4">Testimonials</h1>
-            <div class="row">
-                <div class="col-12 pb-2">
-                    {% include 'website/components/testimonials.html' %}
-                </div>
+<section class="bg-blue py-5 testimonials">
+    <div class="container">
+        <h1 class="text-center fw-light text-light fs-4">Testimonials</h1>
+        <div class="row">
+            <div class="col-12 pb-2">
+                {% include 'website/components/testimonials.html' %}
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <section class="partners py-4">
-        <div class="container">
-            <h1 class="text-center fw-light text-blue fs-4">Our Partners</h1>
-            <div class="row">
-                <div class="col-12">
-                    <img src="{% static 'website/images/others/partnership2.jpg' %}" class="img-fluid" />
-                </div>
+<section class="partners py-4">
+    <div class="container">
+        <h1 class="text-center fw-light text-blue fs-4">Our Partners</h1>
+        <div class="row">
+            <div class="col-12">
+                <img src="{% static 'website/images/others/partnership2.jpg' %}" class="img-fluid" />
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
-    <section class="map pt-4" id="map-direction">
-        <div class="container">
-            <h1 class="text-center fw-light text-blue fs-4">Pay Us a Visit</h1>
-        </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.43409271067!2d36.949190908942185!3d-1.5093062984701806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182fa1d8115929e1%3A0xcbf2a35c7c4f3c4e!2sHalisi%20Family%20Hospital!5e0!3m2!1sen!2ske!4v1741607607211!5m2!1sen!2ske"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+<section class="map pt-4" id="map-direction">
+    <div class="container">
+        <h1 class="text-center fw-light text-blue fs-4">Pay Us a Visit</h1>
+    </div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.43409271067!2d36.949190908942185!3d-1.5093062984701806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182fa1d8115929e1%3A0xcbf2a35c7c4f3c4e!2sHalisi%20Family%20Hospital!5e0!3m2!1sen!2ske!4v1741607607211!5m2!1sen!2ske"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 
 
-    {% include 'website/components/footer.html' %}
+{% include 'website/components/footer.html' %}
 {% endblock %}

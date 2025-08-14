@@ -5,9 +5,9 @@
 <!--            <div class="col-lg-4 col-12">-->
 <!--                <span class="text-sm fw-light"><i class="bi bi-clock pe-1"></i> Open 24 Hrs, All Week and Public Holidays</span>-->
 <!--            </div>-->
-            <!--<div class="col-lg-3 col-12">-->
-            <!--    <span class="text-sm fw-light"><i class="bi bi-envelope"></i> hallo@halisifamily.hospital</span>-->
-            <!--</div>-->
+<!--<div class="col-lg-3 col-12">-->
+<!--    <span class="text-sm fw-light"><i class="bi bi-envelope"></i> hallo@halisifamily.hospital</span>-->
+<!--</div>-->
 <!--            <div class="col-lg-2 col-6">-->
 <!--                <span class="text-sm fw-light"><i class="bi bi-phone"></i>0714549796</span>-->
 <!--            </div>-->
@@ -35,7 +35,7 @@
             <!-- Middle: Phone Number -->
             <div class="col-auto">
                 <span class="text-sm fw-light">
-                    <i class="bi bi-phone"></i>  0748 866586
+                    <i class="bi bi-phone"></i> 0748 866586
                 </span>
             </div>
 
@@ -47,7 +47,8 @@
                 <a href="https://twitter.com/halisifamily?lang=en" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-twitter-x text-blue"></i>
                 </a>
-                <a href="https://ke.linkedin.com/in/halisi-hospital-5850b1191" target="_blank" rel="noopener noreferrer">
+                <a href="https://ke.linkedin.com/in/halisi-hospital-5850b1191" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="bi bi-linkedin text-blue"></i>
                 </a>
                 <a href="https://wa.me/254777425474" target="_blank" rel="noopener noreferrer">
@@ -67,72 +68,82 @@
         <a class="navbar-brand" href="{% url 'website:index' %}">
             <img src="{% static 'website/images/logo.png' %}" class="img-fluid" style="width: 40%;" />
         </a>
-        <button class="navbar-toggler" id="humberger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" id="humberger" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'website:index' %}">HOME</a>
+                    <a class="nav-link {% if request.path == '/' %}active{% endif %}"
+                        href="{% url 'website:index' %}">HOME</a>
                 </li>
                 <!--<li class="nav-item">-->
                 <!--    <a class="nav-link {% if request.path == '/about_us' %}active{% endif %}" href="{% url 'website:about_us' %}">ABOUT US</a>-->
                 <!--</li>-->
-                        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ABOUT US
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Culture Statement</a></li>
-            <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Mission & Vision</a></li>
-            <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Values</a></li>
-          </ul>
-        </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ABOUT US
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Culture Statement</a></li>
+                        <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Mission & Vision</a></li>
+                        <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Values</a></li>
+                    </ul>
+                </li>
                 <!--<li class="nav-item">-->
                 <!-- <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{% url 'website:services' %}">SERVICES</a>-->
                 <!--</li>-->
-                       <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           SERVICES
-         </a>
-         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-           <li><a class="dropdown-item"  href="/service/148fb12d-bf8b-4c1f-be33-d59ba63d2c29">Outpatient</a></li>
-           <li><a class="dropdown-item" href="/service/09cf4b99-e1f1-447e-aa1b-cc21a8bab68f">Inpatient</a></li>
-           <li><a class="dropdown-item" href="/service/b9fd26d2-69d3-40a9-a4f0-77f5d19663ad">Maternity</a></li>
-           <li><a class="dropdown-item" href="/service/d0603d0d-87a0-43ef-9ab9-cba3978c2430">Theatre</a></li>
-         </ul>
+ <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown"
+        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        SERVICES
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% for service in services %}
+        <li>
+            <a class="dropdown-item" href="{% url 'website:service' service.sid %}">{{ service.name }}</a>
         </li>
+        {% endfor %}
+    </ul>
+</li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/packages' %}active{% endif %}" href="{% url 'website:packages' %}">PACKAGES</a>
+                    <a class="nav-link {% if request.path == '/packages' %}active{% endif %}"
+                        href="{% url 'website:packages' %}">PACKAGES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/careers' %}active{% endif %}" href="{% url 'website:careers' %}">CAREERS</a>
+                    <a class="nav-link {% if request.path == '/careers' %}active{% endif %}"
+                        href="{% url 'website:careers' %}">CAREERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/contact_halisi' %}active{% endif %}" href="{% url 'website:contact_halisi' %}">CONTACT US</a>
+                    <a class="nav-link {% if request.path == '/contact_halisi' %}active{% endif %}"
+                        href="{% url 'website:contact_halisi' %}">CONTACT US</a>
                 </li>
-                
+
             </ul>
-            
+
         </div>
     </div>
     <style>
-@media (min-width: 375px) and (max-width: 450px) {
-  .navbar .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+        @media (min-width: 375px) and (max-width: 450px) {
+            .navbar .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
 
-  .navbar .navbar-brand {
-    flex: 1;
-  }
+            .navbar .navbar-brand {
+                flex: 1;
+            }
 
-  .navbar .custom-toggler {
-    margin-right: 10px; /* You can adjust this as needed */
-    margin-left: auto;
-  }
-</style>
+            .navbar .custom-toggler {
+                margin-right: 10px;
+                /* You can adjust this as needed */
+                margin-left: auto;
+            }
+        }
+    </style>
 
 </nav>
