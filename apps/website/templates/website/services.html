@@ -1,0 +1,26 @@
+{% extends 'website/base.html' %}
+{% block title %} Services -  Halisi Family Hospital | Quality Healthcare You Can Trust {% endblock %}
+
+
+{% block content %}
+{% include 'website/components/header.html' %}
+{% include 'website/components/breadcrumbs.html' with name="Services" %}
+
+<section class="services">
+    <div class="container py-5">
+        <div class="row">
+            {% for service in services %}
+            <div class="col-lg-3 col-12 mb-4">
+                <a href="{% url 'website:service' service.sid %}">
+                    <img src="{{service.image.url}}" class="img-fluid" />
+                    <h1 class="fs-6 fw-light text-center text-blue pt-3">{{ service.name }}</h1>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% include 'website/components/footer.html' %}
+{% endblock %}

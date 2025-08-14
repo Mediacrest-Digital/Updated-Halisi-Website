@@ -1,0 +1,83 @@
+{% load static %}
+<footer>
+    <a href="https://wa.me/254714549796" target="_blank" style="position:fixed; z-index: 99999; bottom: 8px; right: 8px; 
+    display: table; font-family: sans-serif; text-decoration: none; color: #fff; font-size: 0.9em; padding: 0.5em 1.5em 0.5em 1.5em; 
+    border-radius: 2em; font-weight: bold; background: #25d366 no-repeat 1.5em center; 
+    background-size: 1.6em;"><i class="bi bi-whatsapp text-light fs-5"></i> WhatsApp Us</a>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-lg-3 col-12 mb-2">
+                <!-- <h1 class="fs-6 fw-light">HALISI FAMILY HOSPITAL</h1> -->
+                <img src="{% static 'website/images/footer-logo.png' %}" class="img-fluid py-3" />
+                <p class="fs-5 fw-light"></p>
+
+                <div class="footer-socials py-4">
+                    <a href="https://www.facebook.com/HalisiFamilyHospital/" target="_blank" rel="no-opener no-referrer"><i class="bi bi-facebook text-light pe-3"></i></a>
+                    <a href="https://twitter.com/halisifamily?lang=en" target="_blank" rel="no-opener no-referrer"><i class="bi bi-twitter-x text-light pe-3"></i></a>
+                    <a href="https://ke.linkedin.com/in/halisi-hospital-5850b1191" target="_blank" rel="no-opener no-referrer"><i class="bi bi-linkedin text-light pe-3"></i></a>
+                    <a href="https://wa.me/254714549796" target="_blank" rel="no-opener no-referrer"><i class="bi bi-whatsapp text-light"></i></a>
+                    <a href="#map-direction" <i class="bi bi-geo-alt fs-mike text-center text-white"  id="to-map"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 mb-2">
+                <h1 class="fs-6 fw-light">QUICK LINKS</h1>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="{% url 'website:index' %}" class="nav-link text-light">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'website:about_us' %}" class="nav-link text-light">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'website:services' %}" class="nav-link text-light">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-light">Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'website:contact_halisi' %}" class="nav-link text-light">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-6 mb-2">
+                <h1 class="fs-6 fw-light">TIMINGS</h1>
+                <p class="pt-2">Open 24 Hours<br />
+                <span class="text-sm">All Week and Public Holidays</span></p>
+
+                <p class="fw-bold">Visiting Hours</p>
+                <p class="text-sm">Morning: 6:00AM - 7:30AM</p>
+                <p class="text-sm">Midday: 11:30AM - 1:30PM</p>
+                <p class="text-sm">Evening: 6:00PM - 8:00AM</p>
+            </div>
+            <div class="col-lg-3 col-12 mb-2">
+                <h1 class="fs-6 fw-light pb-2">TALK TO US</h1>
+                                <div class="">
+                    <h4 class="fs-6 fw-semibold"><i class="bi bi-phone"></i> Phone</h4>
+                    <p class="fw-light">
+                        +254 735 425 474 <br />
+                        +254 748 866 586
+                    </p>
+                </div>
+                <div class="pb-2">
+                    <h4 class="fs-6 fw-semibold"><i class="bi bi-geo-alt"></i> Physical Address</h4>
+                    <p class="fw-light">
+                        Nairobi-Namanga Road,
+                        Past Total Kitengela, Yukos
+                    </p>
+                </div>
+                <!--<div class="pb-2">-->
+                <!--    <h4 class="fs-6 fw-semibold"><i class="bi bi-envelope"></i> Email</h4>-->
+                <!--    <p class="fw-light">-->
+                <!--        hallo@halisifamily.hospital-->
+                <!--    </p>-->
+                <!--</div>-->
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 pb-3">
+                <p class="fw-light">Halisi Family Hospital &copy; 2025 All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>

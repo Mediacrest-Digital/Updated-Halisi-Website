@@ -1,0 +1,66 @@
+<style>
+  #carouselExampleAutoplaying .carousel-inner {
+    min-height: 220px; /* Keeps consistent height */
+  }
+
+  .carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .carousel-item > div {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    #carouselExampleAutoplaying .carousel-inner {
+      min-height: 250px;
+    }
+  }
+</style>
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner px-5">
+    <div class="carousel-item active">
+      <div class="py-4 text-light text-center px-5">
+        <p>Impressive place, visited a new mummy at Halisi and was impressed by the cleanliness and courtesy of the staff – keep it up.</p>
+        <h5 class="text-light fst-italic">Joy</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="py-4 text-light text-center px-5">
+        <p>Thank you so much for looking after our cucu, such an amazing team of people.</p>
+        <h5 class="fst-italic">Stephanie</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="py-4 text-light text-center px-5">
+        <p>Great care, saved my life!</p>
+        <h5 class="fst-italic">Solomon</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="py-4 text-light text-center px-5">
+        <p>Your dedication to keeping the hospital impeccably clean and ensuring that the staff is courteous and professional truly shines through</p>
+        <h5 class="fst-italic">Joseph</h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="py-4 text-light text-center px-5">
+        <p>The hospital is very clean and the service you get is worth your time</p>
+        <h5 class="fst-italic">Mark</h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

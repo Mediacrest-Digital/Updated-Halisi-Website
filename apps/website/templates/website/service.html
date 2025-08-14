@@ -1,0 +1,57 @@
+{% extends 'website/base.html' %}
+{% block title %} {{ service.name }} - Halisi Family Hospital | Quality Healthcare You Can Trust {% endblock %}
+
+
+{% block content %}
+{% include 'website/components/header.html' %}
+{% include 'website/components/breadcrumbs.html' with name=service.name %}
+
+<section class="services">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <img src="{{service.mainBanner.url}}" class="img-fluid d-block mx-auto" />
+                <div class="content py-4">
+                    <h1 class="fs-4 fw-light text-blue">{{service.name}}</h1>
+                    <p>{{service.description|safe}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <h5 class="text-blue">Services Offered</h5>
+                <ul class="nav flex-column all-list-exclu">
+                    {% for service in services %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'website:service' service.sid %}"><i class="bi bi-arrow-right"></i> {{service.name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+                                    <!--<div class="pt-3">-->
+                                    <!--    <button class="btn btn-white-outline fw-light rounded-0">-->
+                                    <!--        View Special Clinics Schedule-->
+                                    <!--    </button>-->
+                                    <!--</div>-->
+<div class="pt-3">
+    {% if package and package.pdfFile %}
+        <a href="{{ package.pdfFile.url }}" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn btn-white-outline fw-light rounded-0">
+            View maternity packages
+        </a>
+    {% else %}
+        <button class="btn btn-white-outline fw-light rounded-0 disabled" 
+                disabled 
+                title="Coming Soon">
+            View maternity packages
+        </button>
+    {% endif %}
+</div>
+    </div>
+</section>
+
+
+{% include 'website/components/footer.html' %}
+{% endblock %}

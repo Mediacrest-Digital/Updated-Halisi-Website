@@ -1,0 +1,35 @@
+{% extends 'website/base.html' %}
+{% block title %} Careers - Halisi Family Hospital | Quality Healthcare You Can Trust {% endblock %}
+
+
+{% block content %}
+{% include 'website/components/header.html' %}
+{% include 'website/components/breadcrumbs.html' with name="Careers" %}
+
+<section>
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                {% if careers|length <= 0 %}
+                    <h1 class="fs-6 pt-4 pb-3">Currently, we don't have any open positions available.</h1>
+                    <p class="lh-lg text-sm">
+                        We encourage you to check back on this page periodically, as we update our job openings regularly.
+                        In the meantime, we welcome you to learn more about our company, our culture, and our values.
+                    </p>
+                {% else %}
+                    {% for career in careers %}
+                        <p>{{career.name}}</p>
+                    {% endfor %}
+                {% endif %}
+                
+            </div>
+            <div class="col-lg-4 col-12">
+                <h2 class="fs-4 text-blue">Search</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'website/components/footer.html' %}
+{% endblock %}
