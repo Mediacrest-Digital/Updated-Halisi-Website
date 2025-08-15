@@ -1,0 +1,169 @@
+/* 
+COLORS
+Blue: #1f70c1
+Red: 
+Grey: #bfbfbf
+*/
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --blue: #1f70c1;
+    --white: #ffffff;
+    --grey: #a6a6a6;
+    --black: #000000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+#to-map{
+    font-size:17px;
+    margin-left:18px;
+
+;
+}
+
+/*changed services btn*/
+@media only screen and (min-width:1200px) {
+    #btnPt {
+        margin:200px 0 10px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    #btnPt {
+        margin:160px 0 10px;
+    }
+}
+
+
+.top-bar{
+    background-color: var(--white);
+    border-bottom: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.bg-white{
+    background-color: var(--white);
+}
+
+.bg-blue{
+    background-color: var(--blue);
+}
+
+
+.text-blue{
+    color: var(--blue);
+}
+
+.text-grey{
+    color: var(--grey);
+}
+
+.btn-blue-outline{
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.btn-blue-outline:hover {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+}
+
+.btn-white-outline{
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    color: var(--white);
+    margin-top:-270px;
+    margin-left:70px;
+}
+
+.btn-white-outline:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+
+.navbar .navbar-nav .nav-item{
+    padding: 0 0px 0 12px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: var(--blue);
+    font-size: 15px;
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+    color: var(--blue) !important; 
+    border-bottom: 2px solid var(--blue);
+}
+
+.header-socials{
+    text-align: end;
+}
+
+.main-carousel{
+    height: 470px;
+    overflow: hidden;
+}
+
+.about-section{
+    border-bottom: 1px dotted var(--grey);
+}
+
+.visiting-hours{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+.visiting-hours .hours{
+    border-bottom: 1px dotted var(--white);
+    padding-top: 7px;
+}
+
+
+.services-offered .nav .nav-item .nav-link{
+    color: var(--white)
+}
+
+.services-offered .nav .nav-item .nav-link:hover {
+    text-decoration: underline;   
+}
+
+
+.all-list-exclu .nav-item .nav-link{
+    color: var(--blue);
+    border-bottom: 1px dotted var(--blue);
+}
+
+
+
+
+footer{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+
+
+@media only screen and (max-width: 425px){
+    .main-carousel{
+        height: 170px;
+    }
+
+    .header-socials {
+        text-align: start;
+    }
+}
+
+
+

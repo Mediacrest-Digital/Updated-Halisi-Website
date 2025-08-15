@@ -11,59 +11,97 @@
             <!-- Careers Content -->
             <div class="col-lg-8 col-12">
                 <div class="content-card p-4 rounded-3 shadow-sm bg-white">
-                    {% if careers|length <= 0 %}
-                        <div class="text-center py-5">
-                            <i class="fas fa-briefcase text-primary fs-1 mb-3"></i>
-                            <h1 class="fs-4 fw-bold text-primary mb-3">No Current Openings</h1>
-                            <p class="lh-lg text-muted">
-                                We encourage you to check back here periodically as we update our job openings regularly.
-                                In the meantime, feel free to explore our company, culture, and values.
-                            </p>
-                        </div>
-                    {% else %}
-                        <h2 class="fs-4 fw-bold text-primary mb-4">Available Opportunities</h2>
-                        <div class="list-group">
-                            {% for career in careers %}
-                                <a href="{% url 'career_detail' career.id %}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                                    <span class="fw-medium">{{ career.name }}</span>
-                                    <i class="fas fa-chevron-right text-muted"></i>
-                                </a>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                    {% if careers|length <= 0 %} <div class="text-center py-5">
+                        <i class="fas fa-briefcase text-primary fs-1 mb-3"></i>
+                        <h1 class="fs-4 fw-bold text-primary mb-3">No Current Openings</h1>
+                        <p class="lh-lg text-muted">
+                            We encourage you to check back here periodically as we update our job openings regularly.
+                            In the meantime, feel free to explore our company, culture, and values.
+                        </p>
                 </div>
-            </div>
-
-            <!-- Search Sidebar -->
-            <div class="col-lg-4 col-12">
-                <div class="sidebar-card p-4 rounded-3 shadow-sm bg-white">
-                    <h2 class="fs-5 fw-bold text-primary mb-3">Search Careers</h2>
-                    <form method="get" action="">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search jobs...">
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-                        </div>
-                    </form>
+                {% else %}
+                <h2 class="fs-4 fw-bold text-primary mb-4">Available Opportunities</h2>
+                <div class="list-group">
+                    {% for career in careers %}
+                    <a href="{% url 'career_detail' career.id %}"
+                        class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        <span class="fw-medium">{{ career.name }}</span>
+                        <i class="fas fa-chevron-right text-muted"></i>
+                    </a>
+                    {% endfor %}
                 </div>
+                {% endif %}
             </div>
         </div>
+
+        <!-- Search Sidebar -->
+        <div class="col-lg-4 col-12">
+            <div class="sidebar-card p-4 rounded-3 shadow-sm bg-white">
+                <h2 class="fs-5 fw-bold text-primary mb-3">Search Careers</h2>
+                <form method="get" action="">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search jobs...">
+                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
 </section>
 
 <style>
-.careers-section {
-    background: radial-gradient(circle at center, rgba(245, 246, 250, 1) 0%, rgba(230, 233, 239, 1) 100%);
-}
-.content-card, .sidebar-card {
-    border: none;
-}
-.list-group-item {
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-.list-group-item:hover {
-    background: #f8f9fa;
-    transform: translateX(3px);
-}
+    .careers-section {
+        background: radial-gradient(circle at center, rgba(245, 246, 250, 1) 0%, rgba(230, 233, 239, 1) 100%);
+    }
+
+    .content-card,
+    .sidebar-card {
+        border: none;
+    }
+
+    .list-group-item {
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .list-group-item:hover {
+        background: #f8f9fa;
+        transform: translateX(3px);
+    }
+
+    /* Apply main blue color (#1F70C1) and font from index page */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    .content-card,
+    .sidebar-card,
+    .list-group-item,
+    .fw-bold,
+    .fw-medium {
+        font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+    }
+
+    .text-primary,
+    .btn-primary,
+    .fw-bold,
+    .fw-medium {
+        color: #1F70C1 !important;
+    }
+
+    .btn-primary {
+        background-color: #1F70C1 !important;
+        border-color: #1F70C1 !important;
+    }
+
+    .list-group-item-action:hover,
+    .list-group-item-action:focus {
+        color: #1F70C1 !important;
+    }
 </style>
 
 {% include 'website/components/footer.html' %}
