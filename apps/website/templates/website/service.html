@@ -9,7 +9,8 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-8 col-12">
-                <img src="{{service.mainBanner.url}}" class="img-fluid rounded shadow d-block mx-auto mb-4" />
+                <img src="{{ service.mainBanner.url }}" class="img-fluid shadow d-block mx-auto mb-4 rounded-0"
+                    alt="{{ service.name }}" />
                 <div class="content py-4 px-3 bg-white rounded shadow-sm">
                     <h1 class="fs-3 fw-bold text-blue mb-3">{{ service.name }}</h1>
                     <p class="fs-5 text-dark lh-lg mb-0">{{ service.description|safe }}</p>
@@ -20,23 +21,22 @@
                     <h5 class="text-blue mb-3">Other Services Offered</h5>
                     <ul class="nav flex-column all-list-exclu">
                         {% for s in services %}
-                            <li class="nav-item mb-2">
-                                <a class="nav-link text-dark" href="{% url 'website:service' s.sid %}">
-                                    <i class="bi bi-arrow-right text-blue"></i> {{ s.name }}
-                                </a>
-                            </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link text-dark p-2 rounded-0 {% if s.sid == service.sid %}active{% endif %}"
+                                href="{% url 'website:service' s.sid %}">
+                                <i class="bi bi-arrow-right text-dark"></i> {{ s.name }}
+                            </a>
+                        </li>
                         {% endfor %}
                     </ul>
                     <div class="pt-3">
                         {% if package and package.pdfFile %}
-                            <a href="{{ package.pdfFile.url }}" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               class="btn btn-white-outline fw-light rounded-0 w-100">
-                                View maternity packages
-                            </a>
+                        <a href="{{ package.pdfFile.url }}" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-white-outline fw-light rounded-0 w-100">
+                            View maternity packages
+                        </a>
                         {% else %}
-                            <!-- <button class="btn btn-white-outline fw-light rounded-0 w-100 disabled" 
+                        <!-- <button class="btn btn-white-outline fw-light rounded-0 w-100 disabled" 
                                     disabled 
                                     title="Coming Soon">
                                 View maternity packages
@@ -48,6 +48,31 @@
         </div>
     </div>
 </section>
+
+<style>
+    .nav-link {
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* Override Bootstrap dropdown blue color for all navbars on this page */
+    .dropdown-menu,
+    .dropdown-item,
+    .dropdown-item.active,
+    .dropdown-item:active,
+    .dropdown-item:focus {
+        background-color: #fff !important;
+        color: #222 !important;
+        border-radius: 0 !important;
+    }
+
+    /* Match description font style to about us page */
+    .content p {
+        font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+        font-weight: 400 !important;
+        color: #495057 !important;
+    }
+</style>
 
 {% include 'website/components/footer.html' %}
 {% endblock %}

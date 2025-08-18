@@ -20,7 +20,7 @@
             <div class="col-lg-6 order-lg-1">
                 <div class="hero-content">
                     <h1 class="display-5 fw-bold text-blue mb-3">Halisi Family Hospital</h1>
-                    <p class="lead text-primary-light mb-4">Our Culture Statement</p>
+                    <p class="lead text-blue -light mb-4">Our Culture Statement</p>
                     <div class="content-box bg-white p-4 rounded-3 shadow-sm">
                         <p class="mb-0 text-dark-gray lh-lg">
                             At Halisi Family Hospital we conduct and present ourselves professionally,
@@ -57,7 +57,7 @@
             <!-- Mission Card -->
             <div class="col-lg-5 col-md-6">
                 <div class="mission-vision-card text-center p-4 h-100">
-                    <h3 class="h5 fw-bold text-primary mb-3">Our Mission</h3>
+                    <h3 class="h5 fw-bold text-blue mb-3">Our Mission</h3>
                     <p class="text-muted mb-3">What We Do and Why We Do It</p>
 
                     <p class="text-dark-gray lh-base mb-0">
@@ -69,7 +69,7 @@
             <!-- Vision Card -->
             <div class="col-lg-5 col-md-6">
                 <div class="mission-vision-card text-center p-4 h-100">
-                    <h3 class="h5 fw-bold text-primary mb-3">Our Vision</h3>
+                    <h3 class="h5 fw-bold text-blue b-3">Our Vision</h3>
                     <p class="text-muted mb-3">What We Want to Achieve</p>
                     <p class="text-dark-gray lh-base mb-0">
                         Trusted and Loved by Families
@@ -96,7 +96,7 @@
             <!-- Family Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Family</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Family</h4>
                     <p class="text-dark-gray small mb-0">Everyone is family.</p>
                 </div>
             </div>
@@ -104,7 +104,7 @@
             <!-- Kindness Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Kindness</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Kindness</h4>
                     <p class="text-dark-gray small mb-0">We genuinely care for our family and go out of our way to serve
                         them.</p>
                 </div>
@@ -113,7 +113,7 @@
             <!-- Integrity Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Integrity</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Integrity</h4>
                     <p class="text-dark-gray small mb-0">We are open and honest in all our interactions to foster trust,
                         and we do the right thing, in the right way, at the right time and for the right reasons.</p>
                 </div>
@@ -122,7 +122,7 @@
             <!-- Excellence Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Excellence</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Excellence</h4>
                     <p class="text-dark-gray small mb-0">We are eager to improve knowledge, skills, systems and
                         processes. We value great work, love what we do and hate mediocrity.</p>
                 </div>
@@ -131,7 +131,7 @@
             <!-- Respect Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Respect</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Respect</h4>
                     <p class="text-dark-gray small mb-0">We respect and value our family's opinions, preferences,
                         privacy, time and money.</p>
                 </div>
@@ -140,7 +140,7 @@
             <!-- Dedication Value -->
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="value-card-enhanced text-center p-3 h-100">
-                    <h4 class="h6 fw-bold text-primary mb-3">Dedication</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Dedication</h4>
                     <p class="text-dark-gray small mb-0">We are dependable, committed to our work and loyal to the
                         organization.</p>
                 </div>
@@ -151,7 +151,7 @@
         <div class="row justify-content-center mt-3">
             <div class="col-lg-8">
                 <div class="value-card-enhanced text-center p-3">
-                    <h4 class="h6 fw-bold text-primary mb-3">Solutions Oriented</h4>
+                    <h4 class="h6 fw-bold text-blue b-3">Solutions Oriented</h4>
                     <p class="text-dark-gray small mb-0">We are not afraid of problems and embrace challenges with a
                         focus on solutions and results.</p>
                 </div>
@@ -204,11 +204,20 @@
     .family-content,
     .no-fade,
     .text-blue,
-    .text-primary,
+    .text-blue,
     .text-dark-gray,
-    .text-primary-light,
+    .text-blue -light,
     .text-muted,
     .small {
+        font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
+    }
+
+    /* Use same font for description and other services text as about.html */
+    .content h1,
+    .content p,
+    .bg-light h5,
+    .all-list-exclu,
+    .nav-link {
         font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
     }
 
@@ -219,7 +228,7 @@
         background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
     }
 
-    .text-primary-light {
+    .text-blue -light {
         color: #6c757d;
     }
 
@@ -381,6 +390,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* Remove blue color from active submenu links in navbar */
+    .navbar .dropdown-menu .dropdown-item.active,
+    .navbar .dropdown-menu .dropdown-item:active,
+    .navbar .dropdown-menu .dropdown-item:focus {
+        color: #495057 !important;
+        background: #fff !important;
+        border-bottom: none !important;
     }
 
     /* Responsive Design */

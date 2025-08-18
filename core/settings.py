@@ -16,7 +16,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['newhalisi.mediacrest.africa']
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'test.mediacrest.africa']
 
 
 

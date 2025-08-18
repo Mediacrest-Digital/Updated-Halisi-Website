@@ -55,13 +55,24 @@
         background: radial-gradient(circle at center, rgba(245, 246, 250, 1) 0%, rgba(230, 233, 239, 1) 100%);
     }
 
+    /* Make all cards sharp */
+    .content-card,
+    .sidebar-card,
+    .list-group-item,
+    .form-control,
+    .btn {
+        border-radius: 0 !important;
+    }
+
     .content-card,
     .sidebar-card {
-        border: none;
+        border: 1px solid #dee2e6; /* optional: add sharp border */
+        box-shadow: none; /* optional: remove shadow for sharper look */
     }
 
     .list-group-item {
         transition: background 0.2s ease, transform 0.2s ease;
+        border: 1px solid #dee2e6;
     }
 
     .list-group-item:hover {
@@ -69,15 +80,8 @@
         transform: translateX(3px);
     }
 
-    /* Apply main blue color (#1F70C1) and font from index page */
     body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
+    h1, h2, h3, h4, h5, h6, p,
     .content-card,
     .sidebar-card,
     .list-group-item,
@@ -103,6 +107,7 @@
         color: #1F70C1 !important;
     }
 </style>
+
 
 {% include 'website/components/footer.html' %}
 {% endblock %}
