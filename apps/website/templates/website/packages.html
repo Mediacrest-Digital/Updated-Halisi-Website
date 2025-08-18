@@ -1,6 +1,16 @@
 {% extends 'website/base.html' %}
 {% block title %} Packages - Halisi Family Hospital | Quality Healthcare You Can Trust {% endblock %}
 
+<style>
+    /* Remove blue background from active/focused submenu links on this page */
+    .dropdown-menu .dropdown-item.active,
+    .dropdown-menu .dropdown-item:active,
+    .dropdown-menu .dropdown-item:focus {
+        background: #fff !important;
+        color: #495057 !important;
+        outline: none !important;
+    }
+</style>
 
 {% block content %}
 {% include 'website/components/header.html' %}

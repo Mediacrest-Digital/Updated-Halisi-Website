@@ -172,8 +172,8 @@
             <!-- General Enquiries -->
             <a href="tel:+254748866586" class="text-decoration-none">
                 <div class="contact-pill d-flex align-items-center px-4 py-3 rounded-pill">
-                    <div class="pill-icon me-3" style="color: #1F70C1;">
-                        <i class="bi bi-telephone-fill"></i>
+                    <div class="pill-icon me-3">
+                        <i class="bi bi-telephone-fill" style="color: white;"></i>
                     </div>
                     <div>
                         <div class="pill-label fw-semibold" style="color: #1F70C1;">General Enquiries</div>
@@ -185,7 +185,7 @@
             <!-- WhatsApp -->
             <a href="https://wa.me/+254714549796" class="text-decoration-none">
                 <div class="contact-pill d-flex align-items-center px-4 py-3 rounded-pill">
-                    <div class="pill-icon me-3" style="background: #25D366;">
+                    <div class="pill-icon whatsapp me-3">
                         <i class="bi bi-whatsapp" style="color: white;"></i>
                     </div>
                     <div>
@@ -269,7 +269,8 @@
         width: 50px;
         height: 50px;
         background: linear-gradient(135deg, #007bff, #0056b3);
-        border-radius: 0; /* Sharp edges */
+        border-radius: 0;
+        /* Sharp edges */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -285,7 +286,8 @@
     .form-floating>.form-control,
     .form-floating>.form-select {
         border: 2px solid #e9ecef;
-        border-radius: 0 !important; /* Sharp edges */
+        border-radius: 0 !important;
+        /* Sharp edges */
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
         box-shadow: none !important;
         outline: none !important;
@@ -307,7 +309,8 @@
     .btn-primary {
         background: #1F70C1 !important;
         border: none;
-        border-radius: 0 !important; /* Sharp edges */
+        border-radius: 0 !important;
+        /* Sharp edges */
         padding: 15px 30px;
         font-size: 1.1rem;
         transition: all 0.3s ease;
@@ -331,7 +334,8 @@
         height: 45px;
         background: linear-gradient(135deg, #f8f9ff, #e8f2ff);
         border: 2px solid rgba(0, 123, 255, 0.1);
-        border-radius: 0; /* Sharp edges */
+        border-radius: 0;
+        /* Sharp edges */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -373,10 +377,15 @@
         width: 40px;
         height: 40px;
         background: linear-gradient(135deg, #007bff, #0056b3);
-        border-radius: 0; /* Sharp edges */
+        border-radius: 50% !important; /* Changed to round */
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .pill-icon.whatsapp {
+        background: #25D366;
+        border-radius: 50% !important; /* Changed to round */
     }
 
     .pill-icon i {
@@ -415,6 +424,15 @@
     .map-info {
         max-width: 250px;
         border-left: 4px solid #007bff;
+    }
+
+    /* Remove blue background from active/focused submenu links on this page */
+    .dropdown-menu .dropdown-item.active,
+    .dropdown-menu .dropdown-item:active,
+    .dropdown-menu .dropdown-item:focus {
+        background: #fff !important;
+        color: #495057 !important;
+        outline: none !important;
     }
 
     /* Responsive Design */

@@ -20,7 +20,7 @@ input, textarea, select, .form-control, .input-group, button, table, th, td {
     --black: #000000;
 }
 *{
-    scroll-behaviour:smooth;
+    scroll-behavior:smooth;
 }
 
 a{
@@ -208,5 +208,18 @@ footer{
 /*    justify-content:center;*/
 /*}*/
 
+}
+
+/* Remove blue color from all active navbar and dropdown links globally */
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .dropdown-menu .dropdown-item.active,
+.navbar .dropdown-menu .dropdown-item:active,
+.navbar .dropdown-menu .dropdown-item:focus {
+    color: #495057 !important;
+    background: #fff !important;
+    border-bottom: none !important;
+    outline: none !important;
 }
 
