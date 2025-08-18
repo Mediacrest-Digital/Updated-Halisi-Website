@@ -76,11 +76,14 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}"
+                    <a class="nav-link text-blue {% if request.path == '/' %}active{% endif %}"
                         href="{% url 'website:index' %}">HOME</a>
                 </li>
+                <!--<li class="nav-item">-->
+                <!--    <a class="nav-link {% if request.path == '/about_us' %}active{% endif %}" href="{% url 'website:about_us' %}">ABOUT US</a>-->
+                <!--</li>-->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" textx href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link text-blue dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         ABOUT US
                     </a>
@@ -90,31 +93,32 @@
                         <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Values</a></li>
                     </ul>
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        SERVICES
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {% for service in services %}
-                        <li>
-                            <a class="dropdown-item" href="{% url 'website:service' service.sid %}">{{ service.name
-                                }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </li>
+                <!--<li class="nav-item">-->
+                <!-- <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{% url 'website:services' %}">SERVICES</a>-->
+                <!--</li>-->
+ <li class="nav-item dropdown">
+    <a class="nav-link text-blue dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown"
+        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        SERVICES
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% for service in services %}
+        <li>
+            <a class="dropdown-item" href="{% url 'website:service' service.sid %}">{{ service.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/packages' %}active{% endif %}"
+                    <a class="nav-link text-blue {% if request.path == '/packages' %}active{% endif %}"
                         href="{% url 'website:packages' %}">PACKAGES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/careers' %}active{% endif %}"
+                    <a class="nav-link text-blue {% if request.path == '/careers' %}active{% endif %}"
                         href="{% url 'website:careers' %}">CAREERS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/contact_halisi' %}active{% endif %}"
+                    <a class="nav-link text-blue {% if request.path == '/contact_halisi' %}active{% endif %}"
                         href="{% url 'website:contact_halisi' %}">CONTACT US</a>
                 </li>
 
@@ -139,24 +143,6 @@
                 /* You can adjust this as needed */
                 margin-left: auto;
             }
-        }
-
-        /* Main navbar links: HOME, ABOUT US, PACKAGES, CAREERS, CONTACT US */
-        .navbar .navbar-nav>.nav-item>.nav-link {
-            color: #1F70C1 !important;
-        }
-
-        /* Dropdown menu links */
-        .navbar .dropdown-menu .dropdown-item {
-            color: #222 !important;
-            background: #fff !important;
-        }
-
-        .navbar .dropdown-menu .dropdown-item.active,
-        .navbar .dropdown-menu .dropdown-item:active,
-        .navbar .dropdown-menu .dropdown-item:focus {
-            color: #222 !important;
-            background: #f8f9fa !important;
         }
     </style>
 
