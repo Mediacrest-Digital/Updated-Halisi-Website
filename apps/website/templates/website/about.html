@@ -43,9 +43,6 @@
 
 <!-- Mission & Vision Section with Enhanced Styling -->
 <section class="mission-vision py-5 position-relative">
-    <!-- Smoke Effect Background -->
-    <div class="smoke-background"></div>
-
     <div class="container position-relative">
         <div class="row justify-content-center">
             <div class="col-12 text-center mb-4">
@@ -82,9 +79,6 @@
 
 <!-- Core Values Section with Enhanced Styling -->
 <section class="values-section py-5 position-relative">
-    <!-- Smoke Effect Background -->
-    <div class="smoke-background-alt"></div>
-
     <div class="container position-relative">
         <div class="row">
             <div class="col-12 text-center mb-5">
@@ -221,8 +215,6 @@
         font-family: 'Poppins', 'Segoe UI', Arial, sans-serif !important;
     }
 
-    /* Enhanced Styles with Smoke Effects and Better Cards */
-
     /* Existing Styles */
     .bg-gradient-primary {
         background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
@@ -254,34 +246,24 @@
         border-left: 4px solid #1F70C1;
     }
 
-    /* Smoke Background Effects */
+    /* UPDATED STYLES - Remove gradients and blue hover effects */
+    
+    /* Make Mission & Vision and Core Values sections pure white */
+    .mission-vision {
+        background: #ffffff !important;
+    }
+
+    .values-section {
+        background: #ffffff !important;
+    }
+
+    /* Remove smoke background effects completely */
     .smoke-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg,
-                rgba(0, 123, 255, 0.03) 0%,
-                rgba(255, 255, 255, 0.8) 25%,
-                rgba(0, 123, 255, 0.05) 50%,
-                rgba(255, 255, 255, 0.9) 75%,
-                rgba(0, 123, 255, 0.03) 100%);
-        z-index: 1;
+        display: none !important;
     }
 
     .smoke-background-alt {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg,
-                rgba(248, 249, 250, 0.9) 0%,
-                rgba(0, 123, 255, 0.04) 30%,
-                rgba(255, 255, 255, 0.95) 60%,
-                rgba(0, 123, 255, 0.02) 100%);
-        z-index: 1;
+        display: none !important;
     }
 
     /* Remove fading for Mission & Vision and Core Values titles */
@@ -291,22 +273,21 @@
         position: relative;
     }
 
-    /* Enhanced Mission & Vision Cards */
+    /* Updated Mission & Vision Cards - Pure white with gray hover effects and sharp edges */
     .mission-vision-card {
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid rgba(0, 123, 255, 0.1);
-        border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.08);
+        background: #ffffff !important;
+        border: 1px solid #e9ecef;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
         position: relative;
         z-index: 2;
     }
 
     .mission-vision-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0, 123, 255, 0.15);
-        border-color: rgba(0, 123, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        border-color: #dee2e6;
     }
 
     .mission-vision-card .card-icon {
@@ -318,7 +299,6 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
     }
 
     .mission-vision-card .card-icon i {
@@ -326,23 +306,22 @@
         color: white;
     }
 
-    /* Enhanced Value Cards - Smaller Size */
+    /* Updated Value Cards - Pure white with gray hover effects and sharp edges */
     .value-card-enhanced {
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid rgba(0, 123, 255, 0.08);
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.06);
+        background: #ffffff !important;
+        border: 1px solid #e9ecef;
+        border-radius: 0px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         transition: all 0.3s ease;
-        backdrop-filter: blur(8px);
         position: relative;
         z-index: 2;
         min-height: 180px;
     }
 
     .value-card-enhanced:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 123, 255, 0.12);
-        border-color: rgba(0, 123, 255, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        border-color: #dee2e6;
     }
 
     .value-icon-enhanced {
@@ -368,8 +347,7 @@
     }
 
     /* Make core values and hero image backgrounds match index page */
-    .hero-about,
-    .values-section {
+    .hero-about {
         background: #fff !important;
     }
 
@@ -380,7 +358,7 @@
 
     .promise-content,
     .family-content {
-        border-radius: 15px;
+        border-radius: 0px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
     }
@@ -447,11 +425,6 @@
         .value-icon-enhanced i {
             font-size: 1rem;
         }
-    }
-
-    /* Remove background color from about us hero section */
-    .hero-about {
-        background: none !important;
     }
 </style>
 
