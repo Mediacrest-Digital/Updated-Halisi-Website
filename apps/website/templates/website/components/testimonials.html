@@ -1,69 +1,120 @@
-<style>
-  #carouselExampleAutoplaying .carousel-inner {
-    min-height: 220px; /* Keeps consistent height */
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Testimonials Carousel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+   
+        
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        .carousel-inner {
+            position: relative;
+            min-height: 180px;
+            overflow: hidden;
+        }
+        
+        .carousel-item .testimonial-content {
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .carousel-item p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .carousel-item h5 {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+            opacity: 0.8;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">            
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner px-5">
+                    <div class="carousel-item active">
+                        <div class="testimonial-content py-4 text-center px-5 text-white">
+                            <p class="text-white">Impressive place, visited a new mummy at Halisi and was impressed by the cleanliness and courtesy of the staff – keep it up.</p>
+                            <h5 class="fst-italic text-white">Joy</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-content py-4 text-center px-5 text-white">
+                            <p class="text-white">Thank you so much for looking after our cucu, such an amazing team of people.</p>
+                            <h5 class="fst-italic text-white">Stephanie</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-content py-4 text-center px-5 text-white">
+                            <p class="text-white">Great care, saved my life!</p>
+                            <h5 class="fst-italic text-white">Solomon</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-content py-4 text-center px-5 text-white">
+                            <p class="text-white">Your dedication to keeping the hospital impeccably clean and ensuring that the staff is courteous and professional truly shines through</p>
+                            <h5 class="fst-italic text-white">Joseph</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-content py-4 text-center px-5 text-white">
+                            <p class="text-white">The hospital is very clean and the service you get is worth your time</p>
+                            <h5 class="fst-italic text-white">Mark</h5>
+                        </div>
+                    </div>
+                </div>
 
-  .carousel-item {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%; /* Force one per slide */
-  }
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
 
-  .carousel-item > div {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    #carouselExampleAutoplaying .carousel-inner {
-      min-height: 250px;
-    }
-  }
-</style>
-
-<div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-  <div class="carousel-inner px-5">
-    <div class="carousel-item active">
-      <div class="py-4 text-light text-center px-5">
-        <p>Impressive place, visited a new mummy at Halisi and was impressed by the cleanliness and courtesy of the staff – keep it up.</p>
-        <h5 class="text-light fst-italic">Joy</h5>
-      </div>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        
     </div>
-    <div class="carousel-item">
-      <div class="py-4 text-light text-center px-5">
-        <p>Thank you so much for looking after our cucu, such an amazing team of people.</p>
-        <h5 class="fst-italic">Stephanie</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="py-4 text-light text-center px-5">
-        <p>Great care, saved my life!</p>
-        <h5 class="fst-italic">Solomon</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="py-4 text-light text-center px-5">
-        <p>Your dedication to keeping the hospital impeccably clean and ensuring that the staff is courteous and professional truly shines through</p>
-        <h5 class="fst-italic">Joseph</h5>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="py-4 text-light text-center px-5">
-        <p>The hospital is very clean and the service you get is worth your time</p>
-        <h5 class="fst-italic">Mark</h5>
-      </div>
-    </div>
-  </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -177,6 +177,36 @@
         color: #495057 !important;
         outline: none !important;
     }
+        .services-offered {
+        min-height: 621px;
+        max-height: 220px;
+        padding: 18px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .services-offered h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    .services-offered .nav {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    .services-offered #btnPt {
+        margin-top: auto;
+    }
+    @media (max-width: 991px) {
+        .services-offered {
+            min-height: 621px;
+            max-height: 160px;
+            padding: 10px 6px;
+        }
+        .services-offered h1 {
+            font-size: 1.1rem;
+        }
+    }
 </style>
 
 <section class="bg-blue py-5 testimonials">
@@ -213,6 +243,7 @@
         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
+
 
 
 {% include 'website/components/footer.html' %}
