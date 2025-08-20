@@ -1,27 +1,4 @@
 {% load static %}
-<!--<section class="top-bar">-->
-<!--    <div class="container py-2">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-4 col-12">-->
-<!--                <span class="text-sm fw-light"><i class="bi bi-clock pe-1"></i> Open 24 Hrs, All Week and Public Holidays</span>-->
-<!--            </div>-->
-<!--<div class="col-lg-3 col-12">-->
-<!--    <span class="text-sm fw-light"><i class="bi bi-envelope"></i> hallo@halisifamily.hospital</span>-->
-<!--</div>-->
-<!--            <div class="col-lg-2 col-6">-->
-<!--                <span class="text-sm fw-light"><i class="bi bi-phone"></i>0714549796</span>-->
-<!--            </div>-->
-<!--            <div class="col-lg-3 col-6 header-socials">-->
-<!--                <a href="https://www.facebook.com/HalisiFamilyHospital/" target="_blank" rel="no-opener no-referrer"><i class="bi bi-facebook pe-2 text-blue"></i></a>-->
-<!--                <a href="https://twitter.com/halisifamily?lang=en" target="_blank" rel="no-opener no-referrer"><i class="bi bi-twitter-x pe-2 text-blue"></i></a>-->
-<!--                <a href="https://ke.linkedin.com/in/halisi-hospital-5850b1191" target="_blank" rel="no-opener no-referrer"><i class="bi bi-linkedin pe-2 text-blue"></i></a>-->
-<!--                <a href="https://wa.me/254777425474" target="_blank" rel="no-opener no-referrer"><i class="bi bi-whatsapp text-blue"></i></a>-->
-<!--                <a href="#map-direction" <i class="bi bi-geo-alt fs-mike text-center text-blue"  id="to-map"></i></a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
 <section class="top-bar">
     <div class="container py-2">
         <div class="row align-items-center justify-content-between">
@@ -62,7 +39,6 @@
     </div>
 </section>
 
-
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
         <a class="navbar-brand" href="{% url 'website:index' %}">
@@ -79,9 +55,7 @@
                     <a class="nav-link text-blue {% if request.path == '/' %}active{% endif %}"
                         href="{% url 'website:index' %}">HOME</a>
                 </li>
-                <!--<li class="nav-item">-->
-                <!--    <a class="nav-link {% if request.path == '/about_us' %}active{% endif %}" href="{% url 'website:about_us' %}">ABOUT US</a>-->
-                <!--</li>-->
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link text-blue dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -93,22 +67,27 @@
                         <li><a class="dropdown-item" href="{% url 'website:about_us' %}">Values</a></li>
                     </ul>
                 </li>
-                <!--<li class="nav-item">-->
-                <!-- <a class="nav-link {% if request.path == '/services' %}active{% endif %}" href="{% url 'website:services' %}">SERVICES</a>-->
-                <!--</li>-->
- <li class="nav-item dropdown">
-    <a class="nav-link text-blue dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown"
-        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        SERVICES
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        {% for service in services %}
-        <li>
-            <a class="dropdown-item" href="{% url 'website:service' service.sid %}">{{ service.name }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-blue dropdown-toggle" href="{% url 'website:services' %}" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        SERVICES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if services %}
+                            {% for service in services %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'website:service' service.sid %}">{{ service.name }}</a>
+                            </li>
+                            {% endfor %}
+                        {% else %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'website:services' %}">View All Services</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link text-blue {% if request.path == '/packages' %}active{% endif %}"
                         href="{% url 'website:packages' %}">PACKAGES</a>
@@ -121,11 +100,10 @@
                     <a class="nav-link text-blue {% if request.path == '/contact_halisi' %}active{% endif %}"
                         href="{% url 'website:contact_halisi' %}">CONTACT US</a>
                 </li>
-
             </ul>
-
         </div>
     </div>
+    
     <style>
         @media (min-width: 375px) and (max-width: 450px) {
             .navbar .container {
@@ -140,7 +118,6 @@
 
             .navbar .custom-toggler {
                 margin-right: 10px;
-                /* You can adjust this as needed */
                 margin-left: auto;
             }
         }
@@ -151,6 +128,15 @@
         .navbar .navbar-nav .nav-link:focus {
             color: #1F70C1 !important;
         }
+        
+        /* Ensure dropdown menus are always clickable */
+        .dropdown-menu {
+            display: none;
+        }
+        
+        .dropdown:hover .dropdown-menu,
+        .dropdown.show .dropdown-menu {
+            display: block;
+        }
     </style>
-
 </nav>

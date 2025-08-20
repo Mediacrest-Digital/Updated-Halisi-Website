@@ -76,8 +76,9 @@
 
                         </p>
 
-                        <a class="btn btn-blue-outline rounded-0 mb-3" href="{% url 'website:about_us' %}">Read More <i
-                                class="bi bi-arrow-right ps-3"></i></a>
+                        <a class="custom-blue-btn rounded-0 mb-3" href="{% url 'website:about_us' %}">
+                            Read More <i class="bi bi-arrow-right ps-3"></i>
+                        </a>
                     </div>
                     <div class="col-lg-4 offset-lg-2 col-12">
                         <div class="visiting-hours p-4">
@@ -129,8 +130,7 @@
 
                 <div class="pt-3" id="btnPt">
                     {% if specialty_service %}
-                    <a href="{% url 'website:service' specialty_service.sid %}"
-                        class="btn btn-white-outline fw-light rounded-0 text-decoration-none d-inline-block">
+                    <a href="{% url 'website:service' specialty_service.sid %}" class="custom-blue-btn rounded-0 mb-3">
                         View Specialty Clinics Schedule
                     </a>
                     {% else %}
@@ -207,6 +207,27 @@
             font-size: 1.1rem;
         }
     }
+    .custom-blue-btn {
+    background: #1F70C1;
+    color: #fff !important;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 12px 24px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(31, 112, 193, 0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.custom-blue-btn:hover, .custom-blue-btn:focus {
+    background: #155a96;
+    color: #fff !important;
+    border-color: #fff;
+    text-decoration: none;
+}
 </style>
 
 <section class="bg-blue py-5 testimonials">

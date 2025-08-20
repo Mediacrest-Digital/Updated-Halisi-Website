@@ -1,3 +1,10 @@
+/* Main navbar links blue color */
+.main-nav-link {
+    color: #1F70C1 !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+/* Submenu links remain default (dropdown-item) */
 /* 
 COLORS
 Blue: #1f70c1
