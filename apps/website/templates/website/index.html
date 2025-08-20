@@ -68,7 +68,7 @@
                     <div class="col-lg-6 col-12 pt-5">
                         <h1 class="text-blue fs-3">Halisi Family Hospital</h1>
                         <p class="lh-lg fw-light">
-                            Halisi Family Hospital is a private healthcare organization located in Kitengela, Kajiado
+                            Halisi Family Hospital is a level 4 private healthcare organization located in Kitengela, Kajiado
                             County.
                             ‘Halisi’ is a Swahili word that means being truthful, authentic, genuine and real. Our
                             culture focuses on providing health and wellness services to families in a manner that
@@ -76,7 +76,7 @@
 
                         </p>
 
-                        <a class="btn btn-blue-outline rounded-0 mb-3" href="{{package.pdfFile.url}}">Read More <i
+                        <a class="btn btn-blue-outline rounded-0 mb-3" href="{% url 'website:about_us' %}">Read More <i
                                 class="bi bi-arrow-right ps-3"></i></a>
                     </div>
                     <div class="col-lg-4 offset-lg-2 col-12">
@@ -131,7 +131,7 @@
                     {% if specialty_service %}
                     <a href="{% url 'website:service' specialty_service.sid %}"
                         class="btn btn-white-outline fw-light rounded-0 text-decoration-none d-inline-block">
-                        View Special Clinics Schedule
+                        View Specialty Clinics Schedule
                     </a>
                     {% else %}
                     <button class="btn btn-white-outline fw-light rounded-0" disabled>
