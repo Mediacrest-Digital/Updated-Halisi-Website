@@ -123,18 +123,15 @@
         }
 
         /* Ensure active nav links are blue */
+        .navbar .navbar-nav .nav-link {
+            color: #1F70C1 !important;
+        }
+        /* Active/focused nav links stay blue */
         .navbar .navbar-nav .nav-link.active,
         .navbar .navbar-nav .nav-link:active,
         .navbar .navbar-nav .nav-link:focus {
             color: #1F70C1 !important;
-        }
-        
-        /* Ensure dropdown menus are always clickable */
-        .dropdown-menu {
-            display: none;
-        }
-        
-        .dropdown:hover .dropdown-menu,
+        }.dropdown:hover .dropdown-menu,
         .dropdown.show .dropdown-menu {
             display: block;
         }
